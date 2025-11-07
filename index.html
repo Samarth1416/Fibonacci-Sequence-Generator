@@ -1,0 +1,95 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Sequence Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-infinity"></i> Fibonacci Sequence Generator</h1>
+            <p class="subtitle">Generate Fibonacci sequences with custom length and starting numbers</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="sequenceLength"><i class="fas fa-list-ol"></i> Sequence Length</label>
+                <input type="number" id="sequenceLength" min="1" max="100" value="10" placeholder="Enter number of terms">
+            </div>
+            
+            <div class="input-group">
+                <label for="firstNumber"><i class="fas fa-number"></i> First Number (F0)</label>
+                <input type="number" id="firstNumber" value="0" placeholder="First number in sequence">
+            </div>
+            
+            <div class="input-group">
+                <label for="secondNumber"><i class="fas fa-number"></i> Second Number (F1)</label>
+                <input type="number" id="secondNumber" value="1" placeholder="Second number in sequence">
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="generate-btn" id="generateBtn">
+                <i class="fas fa-calculator"></i> Generate Sequence
+            </button>
+            <button class="clear-btn" id="clearBtn">
+                <i class="fas fa-trash"></i> Clear Results
+            </button>
+        </div>
+
+        <div class="action-buttons">
+            <button class="action-btn" id="copyBtn">
+                <i class="fas fa-copy"></i> Copy to Clipboard
+            </button>
+            <button class="action-btn" id="saveTxtBtn">
+                <i class="fas fa-save"></i> Save as Text
+            </button>
+            <button class="action-btn" id="toggleThemeBtn">
+                <i class="fas fa-moon"></i> Toggle Theme
+            </button>
+        </div>
+
+        <div class="results-section">
+            <div class="results-header">
+                <h2><i class="fas fa-list"></i> Generated Sequence</h2>
+                <span id="generationTime"></span>
+            </div>
+            
+            <div class="results-content">
+                <div id="fibonacciSequence"></div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat-box">
+                    <div>Sequence Length</div>
+                    <div class="stat-value" id="sequenceLengthValue">0</div>
+                </div>
+                <div class="stat-box">
+                    <div>Sum of Sequence</div>
+                    <div class="stat-value" id="sequenceSum">0</div>
+                </div>
+                <div class="stat-box">
+                    <div>Golden Ratio (φ)</div>
+                    <div class="stat-value">1.61803</div>
+                </div>
+            </div>
+        </div>
+       
+        <div class="info-section">
+            <h3><i class="fas fa-info-circle"></i> About the Fibonacci Sequence</h3>
+            <p>The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1.</p>
+            <div class="sequence-example">F<sub>n</sub> = F<sub>n-1</sub> + F<sub>n-2</sub></div>
+            <p>This sequence appears in many places in nature, from the arrangement of leaves on a stem to the spiral patterns of shells and galaxies.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Designed By Samarth Ghole And Team| Fibonacci Sequence Generator © 2025</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
